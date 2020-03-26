@@ -49,7 +49,13 @@ $ cd ApartmentApp   (or whatever you end up naming it)
 
 # install app's dependencies
 $ npm install
+
+# start app
+$ npm start
 ```
+
+When your app fires up you can simply login as any of the test users above. They are automatically created in a local mongodb on your machine. Make sure you have mongo installed for your database layer otherwise you will not see any data or be able to store or create users and apartments etc.
+
 
 ## Copyright and license
 
