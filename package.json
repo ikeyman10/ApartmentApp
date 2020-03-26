@@ -1,0 +1,46 @@
+{
+  "name": "apartmentApp",
+  "version": "1.0.0",
+  "description": "Apartment Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "npm run seed && cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.3",
+    "nodemailer": "^6.4.6",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "react-cookie": "^4.0.3",
+    "react-google-maps": "^9.4.5",
+    "react-player": "^1.15.2",
+    "react-toastify": "^5.5.0",
+    "react-vimeo": "^2.0.0",
+    "react-youtube": "^7.9.0",
+    "reactstrap-confirm": "^1.2.0",
+    "screenfull": "^5.0.2"
+  }
+}
